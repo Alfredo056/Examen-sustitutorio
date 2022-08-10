@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<html lang="es">
+    <head>
+        <meta charset="utf-8" />
+        <title>
+            {% block title %}
+
+            {% endblock %}
+            GGV
+        </title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}" />
+    </head>
+    <body>
+        <header>
+            <div id="logotipo">
+                     <img src ="{% static 'image/untels.png'%}" height="90px" width="150px"/>
+                <h1>Examen Sustitutorio</h1>
+            </div>
+        </header>
+        
+        <nav>
+            <ul>
+                <li>
+                    <a href="{% url 'saludo' %}"> Proveedor</a>
+                </li>
+                <li>
+                    <a href="{% url 'crear_proveedor' %}"> Crear Proveedor</a>
+                </li>
+                <li>
+                    <a href="{% url 'producto' %}"> Producto</a>
+                </li>
+                <li>
+                    <a href="{% url 'crear_producto' %}"> Crear Producto</a>
+                </li>
+                
+            </ul>
+
+        </nav>
+            <div class="barra">
+                 <span class="esquina-izquierda"></span>
+                 <span class="relleno-barra"></span>
+                 <span class="esquina-derecha"></span>
+            </div>
+
+            <div id="content">
+                <div class="box">
+                    
+                    {% block content %}
+                         <strong></strong>
+                    {% endblock %}   
+                </div>
+                
+            </div>
+        <footer>
+                 &copy; Vilca_ES "{% now "d/m/Y h:m:s" %}"
+        </footer>
+    </body>
+</html>
