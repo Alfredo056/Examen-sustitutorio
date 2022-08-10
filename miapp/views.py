@@ -1,5 +1,7 @@
-from django.shortcuts import render
-from requests import request
+from django.http import HttpResponse
+from django.shortcuts import render, HttpResponse
+from requests import request 
+from miapp.models import Producto
 
 # Create your views here.
 
@@ -37,3 +39,4 @@ def agre_pro(request):
         'titulo': 'saludo',
         'saludo': 'Listado de proveedors'
     })
+

@@ -23,5 +23,5 @@ urlpatterns = [
     path('saludo/' , views.saludo ,name = "saludo"),
     path('producto/' , views.saludo2 ,name = "producto"),
     path('crear_proveedor/' , views.crear_pro ,name = "crear_proveedor"),
-    path('crear_producto/' , views.agre_pro ,name = "crear_producto")
+    path('crear_producto/' , views.agre_pro ,name = "crear_producto"),
 ]
